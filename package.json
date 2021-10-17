@@ -1,0 +1,41 @@
+{
+  "name": "FrontEndTools",
+  "version": "1.0.0",
+  "description": "Contains tool modules commonly used in the front end",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarksJohn/FrontEndTools.git"
+  },
+  "author": "stark",
+  "bugs": {
+    "url": "https://github.com/StarksJohn/FrontEndTools/issues"
+  },
+  "homepage": "https://github.com/StarksJohn/FrontEndTools/blob/main/README.md",
+  "dependencies": {
+    "ahooks": "^2.10.11",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "clean-deep": "^3.4.0",
+    "dva-core": "^2.0.4",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
+    "qs": "^6.10.1",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.172",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0"
+  }
+}

@@ -1,2 +1,2 @@
 # FrontEndTools
-Contains tool modules commonly used in the front end
+Contains react and vue tool modules commonly used in the front end
