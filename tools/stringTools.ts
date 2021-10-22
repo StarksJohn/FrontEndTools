@@ -154,6 +154,45 @@ export function stripscript (s: string) {
   return rs
 }
 
+export function hex_change (v:string):number {
+  let res = -1
+  switch (v) {
+    case 'a':
+      res = 10
+      break
+    case 'b':
+      res = 11
+      break
+    case 'c':
+      res = 12
+      break
+    case 'd':
+      res = 13
+      break
+    case 'e':
+      res = 14
+      break
+    case 'f':
+      res = 15
+      break
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+      res = Number(v)
+      break
+    default:
+      res = 0
+      break
+  }
+  return res
+}
+
 // 字符转16进制数字
 export function hexChange (v: string) {
   let res

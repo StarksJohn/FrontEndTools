@@ -4,7 +4,7 @@
  * isSame : true: 返回相同的元素; false:返回不同元素
  * @returns {Array}
  */
-function filterSameEle <T> (array1: any[], array2: any[]): Array<T> {
+function filterSameEle<T> (array1: any[], array2: any[]): Array<T> {
   // 临时数组存放
   const tempArray1 = []// 临时数组1
   const tempArray2 = []// 临时数组2
@@ -25,7 +25,7 @@ function filterSameEle <T> (array1: any[], array2: any[]): Array<T> {
  * @param v
  * @returns {*|Number|number}
  */
-function isContainValue (v:any, array:any[]):boolean {
+function isContainValue (v: any, array: any[]): boolean {
   for (const i in array) {
     // Log.log('i下标  ='+i + ' arr[i] '+this[i] );
     if (array[i] === v) {
@@ -44,7 +44,7 @@ function isContainValue (v:any, array:any[]):boolean {
                         return element.id==0
                      }
  */
-function findObjIndex<T> (predicateFunc:(value: T, index: number, obj: T[])=> unknown, array:T[]):number {
+function findObjIndex<T> (predicateFunc: (value: T, index: number, obj: T[]) => unknown, array: T[]): number {
   return array.findIndex(predicateFunc)
 }
 
@@ -56,7 +56,7 @@ function findObjIndex<T> (predicateFunc:(value: T, index: number, obj: T[])=> un
                      }
  * @returns {number}
  */
-function findObjWithPredicate<T> (predicateFunc:(value: T, index: number, obj: T[])=> unknown, array:T[]):any {
+function findObjWithPredicate<T> (predicateFunc: (value: T, index: number, obj: T[]) => unknown, array: T[]): any {
   const index = array.findIndex(
     predicateFunc
   )
@@ -73,7 +73,7 @@ function findObjWithPredicate<T> (predicateFunc:(value: T, index: number, obj: T
  * @param array
  * @returns {number}
  */
-function remove (val:any, array:any[]) {
+function remove (val: any, array: any[]) {
   const index = array.indexOf(val)
   if (index > -1) {
     array.splice(index, 1)
@@ -100,7 +100,7 @@ const removeObject = (array: any[], predicateFunc: (value: never, index: number,
  * @param predicateFunc
  * @returns {*}
  */
-const filterSameItem = <T>(arr: T[], predicateFunc: (value: T, index: number, obj: T[])=> unknown) => {
+const filterSameItem = <T>(arr: T[], predicateFunc: (value: T, index: number, obj: T[]) => unknown) => {
   return arr.map(
     (value, index, array) => {
       return predicateFunc(value, index, array)
@@ -113,7 +113,7 @@ const filterSameItem = <T>(arr: T[], predicateFunc: (value: T, index: number, ob
  * @param obj
  * @returns {any[]}
  */
-function initArrayByObjValues (obj:any) :any[] {
+function initArrayByObjValues (obj: any): any[] {
   return Array.from(
     Object.values(obj)
   ).map(
@@ -160,7 +160,7 @@ export const sortType = {
  * key1:每个数组元素都有的key，按这个key的值对数组元素进行 排序,如果key的 值是 number，则按 sortType的值对 number 进行排序
  * key2:每个数组元素都有的key，当key1相同时，用key2 排序。默认 传 ""
  */
-function sortObjectArr (key1:string, key2:string = '', sortType = 0/* 外部不传此参数时，默认是0，升序排序 */) {
+function sortObjectArr (key1: string, key2: string = '', sortType = 0/* 外部不传此参数时，默认是0，升序排序 */) {
   // by函数接受一个成员名字符串和一个可选的次要比较函数做为参数并返回一个可以用来包含该成员的对象数组进行排序的比较函数，当o[age] 和 p[age] 相等时，次要比较函数被用来决出高下
   const by = function (key1: string | number, key2: { (o: any, p: any): any; (arg0: any, arg1: any): any } | undefined) {
     return function (o: { [x: string]: any }, p: { [x: string]: any }) {
@@ -191,7 +191,7 @@ function sortObjectArr (key1:string, key2:string = '', sortType = 0/* 外部不�
  * @param array
  * @returns {*[]}
  */
-function dedupe (array:any[]) {
+function dedupe (array: any[]) {
   return [...new Set(array)]
 }
 
@@ -201,7 +201,7 @@ function dedupe (array:any[]) {
  * @param obj
  * @returns {*}
  */
-const deepCopyArr = (obj: { [x: string]: any; constructor: ArrayConstructor }) :any[] => {
+const deepCopyArr = (obj: { [x: string]: any; constructor: ArrayConstructor }): any[] => {
   // return [...this]// 不能用  {...this}，因为 this 是 array类型，深拷贝出来的类型也得是 [] 类型
   const newobj = obj.constructor === Array ? [] : []
   if (typeof obj !== 'object') {
@@ -220,7 +220,7 @@ const deepCopyArr = (obj: { [x: string]: any; constructor: ArrayConstructor }) :
  * @param obj
  * @returns {*}
  */
-function copyArr (array:any[]) {
+function copyArr (array: any[]) {
   return [...array]// 不能用  {...this}，因为 this 是 array类型，深拷贝出来的类型也得是 [] 类型
 }
 
@@ -234,7 +234,7 @@ function copyArr (array:any[]) {
  * }
  * @param arr
  */
-function forLoop (cb:Function, arr:any[]) {
+function forLoop (cb: Function, arr: any[]) {
   let result = null
   for (let i = 0, len = arr.length; i < len; i++) {
     if (cb) {
@@ -256,7 +256,7 @@ function forLoop (cb:Function, arr:any[]) {
  * 交换数组元素位置
  * http://www.fly63.com/article/detial/1089
  */
-function exchangeItemIndex (array: any[], index1:number, index2:number) {
+function exchangeItemIndex (array: any[], index1: number, index2: number) {
   array.splice(index2, 1, ...array.splice(index1, 1, array[index2]))
 }
 
@@ -337,6 +337,38 @@ function createArray<T> (length: number, defaultValue: T): Array<T> {
   return result
 }
 
+/*
+用 分隔符 把数组元素 拼接 成一个 字符串
+如 sep:'' ,这样字符串的字母之间就没有分隔符
+ */
+function join (str: string, arr: any[]) {
+  return arr.join(str)
+}
+
+/**
+ * 数组 插入 元素 到指定位置
+ * @param index
+ * @param item
+ */
+function insert (array:any[], index:number, item:any) {
+  array.splice(index, 0, item)
+}
+
+/**
+ * 返回数组最后一个元素
+ * @param arr
+ * @returns {any}
+ */
+const pop = (arr:any[]) => {
+  return arr.pop()
+}
+/**
+ * 创建一个指定长度的数组
+ */
+const newArray = (l: number = 0) => {
+  return new Array(l).fill(0)
+}
+
 export default {
   filterSameEle,
   isContainValue,
@@ -356,5 +388,9 @@ export default {
   removeObject,
   deepCopyArr,
   getLastOne,
-  createArray
+  createArray,
+  join,
+  insert,
+  pop,
+  newArray
 }

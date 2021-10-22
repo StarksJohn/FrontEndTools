@@ -574,6 +574,37 @@ const UTC_local_offset = () => {
   return timeStamp * -1
 }
 
+const englishAbbreviationOfDayOfTheWeek = [
+  {
+    name: 'Mon',
+    steps: 0
+  },
+  {
+    name: 'Tue',
+    steps: 0
+  },
+  {
+    name: 'Wed',
+    steps: 0
+  },
+  {
+    name: 'Thu',
+    steps: 0
+  },
+  {
+    name: 'Fri',
+    steps: 0
+  },
+  {
+    name: 'Sat',
+    steps: 0
+  },
+  {
+    name: 'Sun',
+    steps: 0
+  }
+]
+
 /**
  * monday:{y: xxxx, m: xx, d: xx}
  * sunday:{y: xxxx, m: xx, d: xx}
@@ -643,7 +674,8 @@ const dateTools = {
   xxxx_xx_xx_to_timestamp,
   UTC_local_offset,
   getMondayAndSunday,
-  getDay
+  getDay,
+  englishAbbreviationOfDayOfTheWeek
 }
 
 export default dateTools

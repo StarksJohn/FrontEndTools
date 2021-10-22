@@ -50,7 +50,7 @@ export function noRounding (num: number, digit: number | undefined) {
 // }
 
 /**
- * 字符串转 number http://www.jb51.net/article/59240.htm
+ * 字符串转 number && 丢弃小数部分,保留整数部分  http://www.jb51.net/article/59240.htm
  * @param str
  * @returns {*}
  */
