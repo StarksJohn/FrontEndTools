@@ -1,6 +1,6 @@
 {
   "name": "full-stack-front-end-tools",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Contains tool modules commonly used in the front end",
   "main": "index.ts",
   "scripts": {
@@ -39,6 +39,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
+    "ts-loader": "^9.2.6",
     "tslint": "^6.1.3",
     "typescript": "^4.4.4"
   }
