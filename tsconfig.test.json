@@ -1,0 +1,10 @@
+{
+  "extends": "./config/tsconfig.base.json",//配置继承于 ./config/tsconfig.base.json
+  "compilerOptions": {
+    "outDir": "./test-dist"//指定了编译后的代码输出目录为 ./test-dist
+  },
+  "include": [//只编译 ./src 以及测试代码 ./test 中的内容
+    "./src",
+    "./test"
+  ]
+}

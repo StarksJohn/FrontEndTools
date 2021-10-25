@@ -32,7 +32,7 @@ local.properties
 # node.js
 #
 node_modules/
-/lib
+/dist
 npm-debug.log
 yarn-error.log
 
