@@ -60,6 +60,7 @@ body.dialog-open {
 @page-bg: #f9f9f9;
 @paddingLeft: 16px;
 @simple-header-height: 44px;
+@pageCellW:343px;
 
 .page {
   -webkit-box-sizing: border-box;
@@ -103,6 +104,9 @@ body.dialog-open {
     content: '';
   }
 }
+/**
+整体加边框
+ */
 .border-1px(@color:#dcdcdc,@h:1px){
   border: @h solid @color;
 }
@@ -268,6 +272,17 @@ https://juejin.cn/book/6844733826191589390/section/6844733826283864072
 .line-text-h (@h: 0) {
   height: @h;
   line-height: @h;
+}
+/**
+固定在页面底部的按钮的容器
+ */
+.fixedBottomBtBox{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  padding-bottom: 34px;
+  .flex-column();
+  background-color:@page-bg;
 }
 
 
