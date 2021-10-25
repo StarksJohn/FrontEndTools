@@ -1,6 +1,6 @@
 {
   "name": "full-stack-front-end-tools",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Contains tool modules commonly used in the front end",
   "main": "index.ts",
   "scripts": {
