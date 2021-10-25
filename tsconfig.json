@@ -10,6 +10,9 @@
     "noEmit": true,
     "strict": true,
     "target": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
     "baseUrl": "./",
     "paths": {
       "*": ["src/*"],
@@ -17,10 +20,12 @@
     },
     "skipLibCheck": true /* 忽略所有的声明文件（ *.d.ts）的类型检查。 */
   },
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "babel.config.js",
     "metro.config.js",
-    "jest.config.js"
+    "jest.config.js",
+    "**/__tests__/*"
   ]
 }
